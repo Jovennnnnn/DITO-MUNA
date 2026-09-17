@@ -1,0 +1,4 @@
+- [ ] Align `_buildHeader` in `resident_dashboard.dart` with `driver_dashboard.dart` (remove desktop branch)
+- [ ] Refine `_buildWebHeader` in `resident_dashboard.dart` to match Driver exactly
+- [ ] Update `_buildHomeTab` to use `Responsive.isDesktop` for consistency
+- [ ] Verify functionality (Edit modal, Logout, Notifications)

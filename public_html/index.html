@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garbage Truck Live Tracking | Residents</title>
+
+    <!-- Mapbox GL JS -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.js"></script>
+
+    <!-- Firebase SDK (Compat Version) -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css?v=1.0.3">
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="icon">🚛</span>
+                <h1>Garbage Truck Tracker</h1>
+            </div>
+            <div id="connection-status" class="status-badge connecting">Connecting...</div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-container">
+            <!-- Information Sidebar -->
+            <aside class="info-panel">
+                <div class="card truck-info">
+                    <h3>Current Truck</h3>
+                    <div id="truck-id" class="data-value">--</div>
+
+                    <div class="status-group">
+                        <label>Status</label>
+                        <div id="truck-status" class="status-text">OFFLINE</div>
+                    </div>
+
+                    <div class="update-group">
+                        <label>Last Updated</label>
+                        <div id="last-updated" class="update-text">Never</div>
+                    </div>
+                </div>
+
+                <div class="instructions">
+                    <p>The map updates automatically when the truck moves. No refresh needed.</p>
+                    <p style="font-size: 0.7rem; margin-top: 10px; opacity: 0.5;">System Version: 1.0.3 (High Contrast Labels)</p>
+                </div>
+            </aside>
+
+            <!-- Map Container -->
+            <section class="map-section">
+                <div id="map"></div>
+                <!-- Loading Overlay -->
+                <div id="loading-overlay" class="overlay">
+                    <div class="spinner"></div>
+                    <p id="loading-text">Connecting to live truck location...</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Configuration & App Script -->
+    <script src="firebase-config.js?v=1.0.3"></script>
+    <script src="app.js?v=1.0.3"></script>
+</body>
+</html>

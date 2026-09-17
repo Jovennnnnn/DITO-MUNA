@@ -1,0 +1,22 @@
+# Task Management
+
+- [x] Researching Responsive UI Implementation
+- [x] Planning Responsive UI Enhancements
+- [x] Implement Responsive Quick Actions in Driver Dashboard
+- [x] Implement Responsive Map Controls in Resident Map Screen
+- [x] Implement Responsive Mini Map Controls in MapboxView
+- [x] Verify UI on different screen sizes
+- [x] Planning Driver Profile Picture Upload
+- [x] Implement Profile Picture Upload in Driver Settings
+- [x] Add Layout and Validation for Driver Profile Picture
+- [x] Verify Profile Picture Sync
+- [x] Planning Balanced Shadows for Driver Dashboard
+- [x] Define Balanced Shadows in AppTheme
+- [x] Apply Balanced Shadows to Driver Dashboard Containers
+- [x] Verify Visual Balance of Shadows
+- [x] Widen Alert & Simulation Row
+- [x] Applying Balanced Shadows to Resident UI
+	- [x] Plan shadow implementation for complaints and notifications
+	- [x] Update `_buildOrganizedComplaintItem` in `resident_complaints_screen.dart`
+	- [x] Update `_buildNotificationItem` in `resident_dashboard.dart`
+	- [x] Verify highlighting effect

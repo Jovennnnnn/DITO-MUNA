@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingVertical="8dp">
+
+    <ImageView
+        android:id="@+id/iv_check_status"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_check"
+        app:tint="#CCCCCC" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="12dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_purok_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Purok 1"
+            android:textStyle="bold"
+            android:textColor="#1A1A1A"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_completion_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pending..."
+            android:textSize="11sp"
+            android:textColor="#9E9E9E" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_status_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WAITING"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:textColor="#9E9E9E"
+        android:background="@drawable/bg_status_indicator"
+        android:backgroundTint="#F5F5F5"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="2dp" />
+</LinearLayout>

@@ -1,0 +1,29 @@
+# Task Management
+
+- [x] Research and Initial Implementation
+	- [x] Analyze existing `ComplaintsScreen` implementation
+	- [x] Analyze `ApiService` for required backend calls
+	- [x] Create Implementation Plan
+	- [x] Add delete methods to `ApiService`
+	- [x] Refactor `ComplaintsScreen` for real-time tracking and action modal
+- [x] Web Optimization & Advanced CRUD
+	- [x] Add archive method to `ApiService`
+	- [x] Refactor `ComplaintsScreen` to use `DataTable` layout
+	- [x] Implement Archive/Restore logic
+	- [x] Add Top-level Archive Modal and Bulk CRUD actions
+	- [x] Final UI styling (Reference: Resolve Radar)
+- [x] Premium User Experience (Modals)
+	- [x] Design and implement `_showPremiumDialog` helper
+	- [x] Replace `bulkAction` confirmation with Premium Modal
+	- [x] Replace snackbars with Success/Error Premium Modals
+	- [x] Update `_updateTicket` to use Premium Modals
+- [/] Data Management Module (Kotlin Mirror)
+	- [/] Implement `DataManagementScreen` with Auto Backup sync
+	- [ ] Wire "Backup Now" and "Export" triggers
+	- [ ] Create Backup History Table with Download/Delete actions
+	- [ ] Integrate into `AdminDashboard` navigation
+- [ ] Verification
+	- [ ] Verify Firebase sync for Auto Backup
+	- [ ] Verify SQL backup generation and history listing
+	- [ ] Verify PDF export and file downloading
+	- [ ] Perform final build check

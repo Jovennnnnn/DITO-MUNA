@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/splash_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background">
+
+    <!-- Top/Center Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Main Logo with Fade In -->
+        <RelativeLayout
+            android:id="@+id/logo_container"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:alpha="0">
+            <View
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@drawable/bg_circle_logo" />
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_truck"
+                app:tint="@color/white" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Garbage Tracker"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:shadowColor="#40000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4"/>
+
+        <!-- Animating Truck with Speed/Air Effect -->
+        <FrameLayout
+            android:id="@+id/truck_container"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="32dp">
+
+            <!-- Speed Lines (Air Effect) -->
+            <LinearLayout
+                android:id="@+id/speed_lines"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="40dp"
+                    android:layout_height="2dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@color/white"
+                    android:alpha="0.8" />
+                <View
+                    android:id="@+id/line2"
+                    android:layout_width="60dp"
+                    android:layout_height="2.5dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginStart="-10dp"
+                    android:background="@color/white"
+                    android:alpha="0.5" />
+                <View
+                    android:id="@+id/line3"
+                    android:layout_width="35dp"
+                    android:layout_height="2dp"
+                    android:background="@color/white"
+                    android:alpha="0.7" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_truck"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_truck"
+                android:contentDescription="Moving truck logo"
+                app:tint="@color/white" />
+        </FrameLayout>
+
+        <!-- Loading Text -->
+        <TextView
+            android:id="@+id/tv_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Wait, opening the app..."
+            android:textColor="#E0FFFFFF"
+            android:textSize="14sp"
+            android:letterSpacing="0.1"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+
+    <!-- Footer -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="© 2026 Brgy. Balintawak Lipa City"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All rights reserved"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+</RelativeLayout>

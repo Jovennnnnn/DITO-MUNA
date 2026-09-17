@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="595dp"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="32dp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="16dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GARBAGE TRACKING SYSTEM" android:textColor="#00BFA5" android:textSize="22sp" android:textStyle="bold" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Official Analytics &amp; Performance Report" android:textColor="#757575" android:textSize="12sp" android:textStyle="italic" />
+        <View android:layout_width="match_parent" android:layout_height="2dp" android:layout_marginTop="12dp" android:background="#00BFA5" />
+    </LinearLayout>
+
+    <!-- Meta Info -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F5F5F5"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <TextView android:id="@+id/tv_pdf_report_type" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Report Type: All Reports" android:textColor="@color/black" android:textSize="14sp" android:textStyle="bold" />
+        <TextView android:id="@+id/tv_pdf_period" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Period: 2026-05-11" android:textColor="@color/black" android:textSize="14sp" />
+        <TextView android:id="@+id/tv_pdf_generated_at" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Generated: May 11, 2026" android:textColor="#616161" android:textSize="11sp" />
+    </LinearLayout>
+
+    <!-- Section 1: Visual Analytics -->
+    <TextView android:id="@+id/tv_pdf_section_1_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="1. Visual Analytics" android:textColor="@color/black" android:textSize="16sp" android:textStyle="bold" />
+    <LinearLayout android:id="@+id/layout_pdf_charts_row_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:orientation="horizontal">
+        <LinearLayout android:id="@+id/layout_pdf_truck_status" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Truck Status" android:textSize="11sp" android:textStyle="bold" />
+            <ImageView android:id="@+id/img_chart_truck" android:layout_width="120dp" android:layout_height="120dp" android:layout_marginTop="4dp" android:scaleType="fitCenter" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/layout_pdf_complaints" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Complaints" android:textSize="11sp" android:textStyle="bold" />
+            <FrameLayout android:layout_width="match_parent" android:layout_height="120dp">
+                <ImageView android:id="@+id/img_chart_complaints" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitCenter" />
+                <TextView android:id="@+id/tv_pdf_no_complaints_detail" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:text="No complaints recorded." android:textColor="#9E9E9E" android:textSize="10sp" android:textStyle="italic" android:visibility="gone" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/layout_pdf_purok_coverage" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:gravity="start" android:orientation="vertical">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Purok Coverage Frequency" android:textSize="11sp" android:textStyle="bold" />
+        <ImageView android:id="@+id/img_chart_coverage" android:layout_width="531dp" android:layout_height="350dp" android:layout_marginTop="8dp" android:scaleType="fitStart" />
+    </LinearLayout>
+
+    <!-- Section 2: Performance & Predictions -->
+    <TextView android:id="@+id/tv_pdf_section_2_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="2. Performance &amp; Predictions" android:textColor="@color/black" android:textSize="16sp" android:textStyle="bold" />
+    <LinearLayout android:id="@+id/layout_pdf_performance" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:orientation="vertical" android:padding="8dp" android:background="#FAFAFA">
+        <LinearLayout android:id="@+id/row_pdf_prediction_tomorrow" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="• Tomorrow Volume Prediction:" />
+            <TextView android:id="@+id/tv_pdf_prediction_tomorrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/row_pdf_prediction_week" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="• Weekly Volume Forecast:" />
+            <TextView android:id="@+id/tv_pdf_prediction_week" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/row_pdf_avg_response" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="• Avg Response Time:" />
+            <TextView android:id="@+id/tv_pdf_avg_response" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/row_pdf_resolution_rate" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="• Complaint Resolution Rate:" />
+            <TextView android:id="@+id/tv_pdf_resolution_rate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Section 3: Route Efficiency -->
+    <TextView android:id="@+id/tv_pdf_section_3_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="3. Route Efficiency Details" android:textColor="@color/black" android:textSize="16sp" android:textStyle="bold" />
+    <LinearLayout android:id="@+id/layout_pdf_route_efficiency" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:orientation="vertical" android:padding="8dp" android:background="#F3E5F5">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="• Avg Collection Time:" />
+            <TextView android:id="@+id/tv_pdf_avg_collection_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="• Total Stops Recorded:" />
+            <TextView android:id="@+id/tv_pdf_stops" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="• Distance Covered:" />
+            <TextView android:id="@+id/tv_pdf_distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="• Prediction Error (MAE):" />
+            <TextView android:id="@+id/tv_pdf_mae" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Section 4: Intelligent Summary -->
+    <TextView android:id="@+id/tv_pdf_section_4_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="4. Intelligent Executive Summary" android:textColor="@color/black" android:textSize="16sp" android:textStyle="bold" />
+    <LinearLayout android:id="@+id/layout_pdf_intelligent_summary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:background="#E0F2F1" android:padding="16dp">
+        <TextView android:id="@+id/tv_pdf_intelligent_summary" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#00695C" android:textSize="13sp" android:textStyle="italic" />
+    </LinearLayout>
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="40dp" android:gravity="center" android:text="Generated by GarbageSis System © 2026." android:textColor="#9E9E9E" android:textSize="10sp" />
+</LinearLayout>

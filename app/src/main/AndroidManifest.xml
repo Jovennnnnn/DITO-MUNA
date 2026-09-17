@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Garbage Tracker"
+        android:theme="@style/Theme.MyApplication"
+        android:usesCleartextTraffic="true">
+
+        <meta-data
+            android:name="com.mapbox.AccessToken"
+            android:value="pk.eyJ1IjoicHJpbmNlNjcwMyIsImEiOiJjbW9zeHB2ODIwNDFnMnRwdWxsam9sYWJmIn0.8DQhyf9Z9-yP8lCuP2WS3g" />
+
+        <activity android:name=".SplashActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".MainActivity" android:exported="true" />
+        <activity android:name=".Verify2FAActivity" android:exported="false" />
+        <activity android:name=".RegisterActivity" android:exported="false" />
+        <activity android:name=".ResidentRegisterActivity" android:exported="false" />
+        <activity android:name=".DriverRegisterActivity" android:exported="false" />
+        <activity android:name=".AdminDashboardActivity" android:exported="false" />
+        <activity android:name=".AnalyticsActivity" android:exported="false" />
+        <activity android:name=".ComplaintsActivity" android:exported="false" />
+        <activity android:name=".ResidentDashboardActivity" android:exported="false" />
+        <activity android:name=".FileComplaintActivity" android:exported="false" />
+        <activity android:name=".DriverDashboardActivity" android:exported="false" />
+        <activity android:name=".DriverSettingsActivity" android:exported="false" />
+        <activity android:name=".UserManagementActivity" android:exported="false" />
+        <activity android:name=".TrackTrucksActivity" android:exported="false" />
+        <activity android:name=".ResidentComplaintsActivity" android:exported="false" />
+        <activity android:name=".ResidentSettingsActivity" android:exported="false" />
+        <activity android:name=".DriverIssuesActivity" android:exported="false" />
+        <activity android:name=".ForgotPasswordActivity" android:exported="false" />
+
+        <service
+            android:name=".network.LocationUpdateService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="location" />
+
+    </application>
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="https" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="http" />
+        </intent>
+    </queries>
+
+</manifest>
