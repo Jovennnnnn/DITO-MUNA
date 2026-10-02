@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="24dp"
+    app:cardElevation="0dp"
+    app:strokeWidth="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/ic_time"
+                app:tint="@color/driver_icon" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Collection History"
+                android:textColor="@color/driver_icon"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Review your completed collection stops today"
+            android:textColor="#757575"
+            android:textSize="14sp" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Log Entry 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="12dp">
+                    <View android:layout_width="8dp" android:layout_height="8dp" android:background="@drawable/circle_white" android:backgroundTint="#4CAF50" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Purok 1 - Completed" android:textColor="#1A1A1A" android:textStyle="bold" android:textSize="14sp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Collected at 8:30 AM" android:textColor="#757575" android:textSize="12sp" />
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SUCCESS" android:textColor="#2E7D32" android:textSize="10sp" android:textStyle="bold" android:background="@drawable/bg_status_indicator" android:backgroundTint="#E8F5E9" android:paddingHorizontal="8dp" android:paddingVertical="2dp" />
+                </LinearLayout>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F5F5F5" />
+
+                <!-- Log Entry 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="12dp">
+                    <View android:layout_width="8dp" android:layout_height="8dp" android:background="@drawable/circle_white" android:backgroundTint="#4CAF50" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Purok 2 - Completed" android:textColor="#1A1A1A" android:textStyle="bold" android:textSize="14sp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Collected at 9:15 AM" android:textColor="#757575" android:textSize="12sp" />
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SUCCESS" android:textColor="#2E7D32" android:textSize="10sp" android:textStyle="bold" android:background="@drawable/bg_status_indicator" android:backgroundTint="#E8F5E9" android:paddingHorizontal="8dp" android:paddingVertical="2dp" />
+                </LinearLayout>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F5F5F5" />
+
+                <!-- Log Entry 3 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="12dp">
+                    <View android:layout_width="8dp" android:layout_height="8dp" android:background="@drawable/circle_white" android:backgroundTint="#F9A825" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Purok 3 - Skipped (Blocked)" android:textColor="#1A1A1A" android:textStyle="bold" android:textSize="14sp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Attempted at 10:05 AM" android:textColor="#757575" android:textSize="12sp" />
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SKIPPED" android:textColor="#E65100" android:textSize="10sp" android:textStyle="bold" android:background="@drawable/bg_status_indicator" android:backgroundTint="#FFF3E0" android:paddingHorizontal="8dp" android:paddingVertical="2dp" />
+                </LinearLayout>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F5F5F5" />
+
+                <!-- Empty state for demo -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="End of logs for today"
+                    android:textAlignment="center"
+                    android:textColor="#BDBDBD"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_close"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="24dp"
+            android:text="Back to Dashboard"
+            app:cornerRadius="16dp"
+            android:backgroundTint="@color/driver_icon"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="24dp"
+    app:cardElevation="8dp"
+    app:strokeWidth="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="12dp"
+                android:src="@android:drawable/ic_menu_help"
+                app:tint="#1B5E20" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FAQs"
+                android:textColor="#1B5E20"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="16dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="How to track the garbage truck?"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Go to the Tracking page to see the real-time location of trucks in your area."
+                    android:textColor="#757575"
+                    android:textSize="13sp" />
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F5F5F5" android:layout_marginVertical="12dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="How to report a complaint?"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Navigate to the Complaints section, click the add button, and fill out the details."
+                    android:textColor="#757575"
+                    android:textSize="13sp" />
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F5F5F5" android:layout_marginVertical="12dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Is my data secure?"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Yes, we use industry-standard encryption to protect your personal information."
+                    android:textColor="#757575"
+                    android:textSize="13sp" />
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F5F5F5" android:layout_marginVertical="12dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Why can't I see the truck?"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="The truck might be out of service or currently in an area with poor signal."
+                    android:textColor="#757575"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_close"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Close"
+            android:textAllCaps="false"
+            android:textColor="#757575"
+            app:rippleColor="#E0E0E0" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

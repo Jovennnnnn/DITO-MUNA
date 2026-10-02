@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="595dp"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="32dp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="16dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GARBAGE TRACKING SYSTEM" android:textColor="#00BFA5" android:textSize="22sp" android:textStyle="bold" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Official Full System Administrative Export" android:textColor="#757575" android:textSize="12sp" android:textStyle="italic" />
+        <View android:layout_width="match_parent" android:layout_height="2dp" android:layout_marginTop="12dp" android:background="#00BFA5" />
+    </LinearLayout>
+
+    <!-- Meta Info -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F5F5F5"
+        android:orientation="vertical"
+        android:padding="12dp">
+        <TextView android:id="@+id/tv_pdf_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="System Export: Complete Data Snapshot" android:textColor="@color/black" android:textSize="12sp" android:textStyle="bold" />
+        <TextView android:id="@+id/tv_pdf_generated_at" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Generated: May 13, 2026" android:textColor="#616161" android:textSize="10sp" />
+    </LinearLayout>
+
+    <!-- Section: Intelligent Summary -->
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="1. Intelligent Executive Summary" android:textColor="@color/black" android:textSize="14sp" android:textStyle="bold" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:background="#E0F2F1" android:padding="12dp">
+        <TextView android:id="@+id/tv_pdf_intelligent_summary" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#00695C" android:textSize="10sp" android:textStyle="italic" />
+    </LinearLayout>
+
+    <!-- Section: System Stats -->
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="2. System Metrics Overview" android:textColor="@color/black" android:textSize="14sp" android:textStyle="bold" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:orientation="horizontal">
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:padding="8dp" android:background="#FAFAFA">
+            <TextView android:id="@+id/tv_pdf_stat_residents" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Total Residents: 0" android:textSize="10sp" />
+            <TextView android:id="@+id/tv_pdf_stat_drivers" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Total Drivers: 0" android:textSize="10sp" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="8dp" android:orientation="vertical" android:padding="8dp" android:background="#FAFAFA">
+            <TextView android:id="@+id/tv_pdf_stat_complaints" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Total Complaints: 0" android:textSize="10sp" />
+            <TextView android:id="@+id/tv_pdf_stat_pending" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Pending Issues: 0" android:textSize="10sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Section: Resident Directory -->
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="3. Active Resident Directory" android:textColor="@color/black" android:textSize="14sp" android:textStyle="bold" />
+    <LinearLayout android:id="@+id/container_residents" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:orientation="vertical" />
+
+    <!-- Section: Driver Directory -->
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="4. Registered Driver Directory" android:textColor="@color/black" android:textSize="14sp" android:textStyle="bold" />
+    <LinearLayout android:id="@+id/container_drivers" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:orientation="vertical" />
+
+    <!-- Section: Reported Issues -->
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="5. Recent Reported Issues &amp; Complaints" android:textColor="@color/black" android:textSize="14sp" android:textStyle="bold" />
+    <LinearLayout android:id="@+id/container_complaints" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:orientation="vertical" />
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="40dp" android:gravity="center" android:text="Export generated by GarbageSis Administrator Module © 2026." android:textColor="#9E9E9E" android:textSize="9sp" />
+</LinearLayout>

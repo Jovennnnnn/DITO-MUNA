@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/tvDetailCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/teal_dark" />
+
+    <TextView
+        android:id="@+id/tvDetailStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_status_badge"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="4dp"
+        android:text="STATUS"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Description"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#757575" />
+
+    <TextView
+        android:id="@+id/tvDetailDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="The full description goes here..."
+        android:textColor="#424242"
+        android:textSize="16sp"
+        android:lineSpacingExtra="4dp" />
+
+    <LinearLayout
+        android:id="@+id/layoutDetailAdminResponse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_admin_response"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Admin Response"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#1B5E20" />
+
+        <TextView
+            android:id="@+id/tvDetailAdminResponse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Response details..."
+            android:textSize="14sp"
+            android:textColor="#2E7D32" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvDetailDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Filed on: 2026-05-13"
+        android:textSize="12sp"
+        android:textColor="#9E9E9E" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDetailClose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Close"
+        app:backgroundTint="@color/teal_dark"
+        app:cornerRadius="12dp" />
+
+</LinearLayout>

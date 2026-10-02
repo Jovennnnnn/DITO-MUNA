@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.example.garbage_tracking_app",
+      "sha256_cert_fingerprints": [
+        "10:3B:82:1D:EA:DF:7B:64:99:99:A2:33:DE:4D:44:81:AA:C1:21:4B:92:43:5D:F7:EA:C0:3E:C2:59:75:E6:FB"
+      ]
+    }
+  }
+]
